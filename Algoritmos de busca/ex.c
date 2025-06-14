@@ -3,13 +3,12 @@
 
 void buscaSeqOrdRep(int arr[], int tam, int el, int *pos, int *quant)
 {
-  *pos = -1; // Inicializa posição como não encontrado
+  *pos = -1;
   *quant = 0;
   for (int i = 0; i < tam; i++)
   {
     if (arr[i] == el)
     {
-      printf("%d %d \n", arr[i], el);
       if (*pos == -1)
       {
         *pos = i;
@@ -40,7 +39,7 @@ int main()
   printf("Digite os elementos do Vetor: \n");
   for (int i = 0; i < tam; i++)
   {
-    scanf("%d", &arr[i]);
+    scanf("%d", arr + i);
   }
 
   printf("Digite o elemento procurado: \n");
